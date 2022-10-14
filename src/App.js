@@ -3,14 +3,14 @@ import {getPokemonsList,
         getPokemonAbilities,
         getTypesList,
         getTypeData,} from './services/poke-api'
-import { Header } from './components/header';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import { AppRoutes } from './pages/routes';
 
 function App() {
   return (
     <>
     <GlobalStyle/>
-    <Header/>
+    <AppRoutes/>
     </>
   );
 }

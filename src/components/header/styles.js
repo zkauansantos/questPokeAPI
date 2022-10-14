@@ -9,6 +9,7 @@ const Container = styled.header`
     display: flex;
     justify-content: space-between;
     background-color: #ccc;
+    position: relative;
 `
 
 const Pikachu = styled.div`
@@ -29,10 +30,10 @@ const Pokebola = styled.div`
 
 
 
-const Logo = styled.h1`
-  position: absolute;
+const Logo = styled.div`
+  position: relative;
   color: transparent;
-  height: 200px;
+  height: 220px;
   width: 100%;
   background: url(${logo}) no-repeat center;
   transition: transform 500ms ease-in-out ;

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 const ButtonTheme = styled.button`
-    width: 10px;
-    height: 10px;
+    width: 200px;
+    height: 20px;
     position: absolute;
-    right: 0;
-    
+    bottom: 0;
+    right: 160px;
+    border-radius: 20%;
+    border: none;
+    color:white;
+    background-color: orangered;
+
 `
 
 export {ButtonTheme}

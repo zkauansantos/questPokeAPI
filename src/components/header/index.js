@@ -5,9 +5,10 @@ const Header = () => {
     return (
         <Container>
             <Pikachu/>
-            <Logo/>         
-            <Pokebola/>
+            <Logo>
             <Button/>
+            </Logo>         
+            <Pokebola/>
         </Container>
     )
 }

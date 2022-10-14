@@ -1,12 +1,13 @@
-import { Container, Logo, Pokebola } from './styles';
-import pokebola from '../../assets/imgs/pokemon-logo.png'
+import { Container, Logo, Pikachu, Pokebola } from './styles';
+import { Button } from '../buttons';
 
 const Header = () => {
     return (
         <Container>
+            <Pikachu/>
+            <Logo/>         
             <Pokebola/>
-            <Logo>4</Logo>           
-            <Pokebola/>
+            <Button/>
         </Container>
     )
 }

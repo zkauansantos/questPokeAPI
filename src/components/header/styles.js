@@ -1,46 +1,36 @@
 import styled from 'styled-components';
-import logo from "../../assets/imgs/pokemon-logo.png";
-import pokebola from '../../assets/imgs/pokebola-logo.png'
-import pikachu from '../../assets/imgs/pikachu-logo.png'
+
 
 const Container = styled.header`
     align-items: center;
     height: 250px;
     display: flex;
-    justify-content: space-between;
-    background-color: #ccc;
+    justify-content: space-around;
+    background-color: #edf6f9;
     position: relative;
 `
-
 const Pikachu = styled.div`
-    background: url(${pikachu}) no-repeat center;
-    background-size: 160px;
-    height: 200px;
-    width: 100%;
-
+    width: 220px;
 `
-
-
-const Pokebola = styled.div`
-    background: url(${pokebola}) no-repeat center;
-    background-size: 130px;
-    height: 200px;
-    width: 100%;
-`
-
-
 
 const Logo = styled.div`
-  position: relative;
-  color: transparent;
-  height: 220px;
-  width: 100%;
-  background: url(${logo}) no-repeat center;
-  transition: transform 500ms ease-in-out ;
-  cursor: pointer;
-  &:hover {
-    transform: scale(0.9);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 420px;
 `;
 
-export {Logo, Container, Pokebola, Pikachu}
+const ImgAnimated = styled.img`
+width: 100%;
+transition: transform 500ms ease-in-out ;
+cursor: pointer;
+&:hover {
+  transform: scale(1.3);
+}
+`
+
+const Img = styled.img`
+  width: 90%;
+`
+
+export {Logo, Container, Pikachu, ImgAnimated, Img }

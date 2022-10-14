@@ -1,9 +1,9 @@
 import { ButtonTheme } from "./styles";
 
-const Button = () => {
+const Button = ({children}) => {
     return (
         <ButtonTheme>
-            Clique para tema escuro
+            {children}
         </ButtonTheme>
     )
 }

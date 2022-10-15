@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Fuzzy Bubbles', cursive;
   }
+
+  li{
+    list-style: none;
+  }
 `
 
 export default App;

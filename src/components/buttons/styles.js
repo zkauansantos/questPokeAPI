@@ -11,6 +11,7 @@ const ButtonTheme = styled.button`
     position: absolute;
     bottom: -25px;
     cursor: pointer;
+    z-index: 1;
 
 `
 

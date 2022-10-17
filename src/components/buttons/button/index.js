@@ -1,4 +1,4 @@
-import React from "../../contexts/theme-context";
+import React from "../../../contexts/theme-context";
 import { ButtonStyled } from "./styles";
 
 

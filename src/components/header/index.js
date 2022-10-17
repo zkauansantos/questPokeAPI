@@ -3,7 +3,7 @@ import pikachu from '../../assets/imgs/pikachu-logo.png'
 import logoPokemon from '../../assets/imgs/pokemon-logo.png'
 import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme-context'
-import { ThemeTogglerButton } from '../../buttons/theme-toggler-button';
+import { ThemeTogglerButton } from '../../components/buttons/theme-toggler-button';
 
 
 const Header = () => {

@@ -5,18 +5,17 @@ const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #edf6f9;
-  height: 30vh;
+  height: auto;
 `
 const Div = styled.div`
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #0d1b2a;
   width: 80% ;
   height: 250px;
-  border-top: 1px solid #0d1b2a; ;
+  border-top: 1px solid; 
 `
 const List = styled.ul`
   margin-top: 50px;

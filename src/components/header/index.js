@@ -1,12 +1,17 @@
-import styled from 'styled-components'
 import { Container, Logo, Pikachu, ImgAnimated, Img } from './styles'
-import { Button } from '../buttons'
 import pikachu from '../../assets/imgs/pikachu-logo.png'
 import logoPokemon from '../../assets/imgs/pokemon-logo.png'
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/theme-context'
+import { ThemeTogglerButton } from '../../buttons/theme-toggler-button';
+
 
 const Header = () => {
+
+  const {theme} = useContext(ThemeContext)
+
   return (
-    <Container>
+    <Container style={theme}>
       <Pikachu>
         <Img src={pikachu} />    
       </Pikachu>
@@ -14,7 +19,7 @@ const Header = () => {
       <Logo>
         <ImgAnimated src={logoPokemon}/>
       </Logo>
-        <Button>Mudar tema</Button>
+      <ThemeTogglerButton/>
 
       <Pikachu>
         <Img src={pikachu} />    

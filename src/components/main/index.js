@@ -1,8 +1,13 @@
 import { Container } from "./styles";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/theme-context";
 
 const Main =  () =>{
+
+  const {theme} = useContext(ThemeContext)
+
   return (
-      <Container>
+      <Container style={{ backgroundColor: theme}}>
       </Container>
   ) 
 }

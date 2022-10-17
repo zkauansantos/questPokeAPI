@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 const Container = styled.header`
+    text-align: center;
     align-items: center;
     height: 250px;
     display: flex;

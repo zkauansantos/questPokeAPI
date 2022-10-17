@@ -1,17 +1,15 @@
-import {getPokemonsList,
-        getPokemonsData,
-        getPokemonAbilities,
-        getTypesList,
-        getTypeData,} from './services/poke-api'
 import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from './contexts/theme-context';
 import { AppRoutes } from './pages/routes';
 
 function App() {
   return (
     <>
-    <GlobalStyle/>
-    <AppRoutes/>
-    </>
+      <GlobalStyle/>    
+        <ThemeProvider>
+        <AppRoutes/>
+      </ThemeProvider>
+    </>  
   );
 }
 

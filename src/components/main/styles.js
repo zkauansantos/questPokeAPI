@@ -5,6 +5,7 @@ const Container = styled.main`
 background: url(${arenaPokemon}) no-repeat center ;
 background-size: cover;
 height: 860px;
+opacity: 0.4;
 `
 
 

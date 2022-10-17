@@ -1,9 +1,13 @@
-import styled from "styled-components"
 import { Container, Div, List } from "./styles"
+import { ThemeContext } from "../../contexts/theme-context"
+import { useContext } from "react"
 
 const Footer = () => {
+
+  const {theme} = useContext(ThemeContext)
+
   return (
-    <Container>
+    <Container style={theme}>
         <Div>
           <h3> Desenvolvido por ➡ Kauan Santos</h3>
           <List>

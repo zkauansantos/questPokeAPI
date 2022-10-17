@@ -6,11 +6,12 @@ export const themes = {
     light: {
         icon: <FaMoon style={{color: '#333652'}}/>,
         color : ' #333652',
-        background: '#edf6f9'
+        background: '#e3d5ca',
+        backgroundMain: 'rgba(132,119,72,0.23)'
     },
     dark: {
         icon: <BsSunFill style={{color: '#333652'}}/>,
-        color: '#edf6f9',
+        color: '#e3d5ca',
         background : ' #333652'
     }
 }

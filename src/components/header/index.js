@@ -11,7 +11,7 @@ const Header = () => {
   const {theme} = useContext(ThemeContext)
 
   return (
-    <Container style={theme}>
+    <Container theme={theme}>
       <Pikachu>
         <Img src={pikachu} />    
       </Pikachu>

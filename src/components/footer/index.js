@@ -7,7 +7,7 @@ const Footer = () => {
   const {theme} = useContext(ThemeContext)
 
   return (
-    <Container style={theme}>
+    <Container theme={theme}>
         <Div>
           <h3> Desenvolvido por ➡ Kauan Santos</h3>
           <List>

@@ -1,16 +1,16 @@
 import { Container, Div } from "./styles";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/theme-context";
-import arenaPokemon from '../../assets/imgs/pokemon-arena.jpg'
-import styled from "styled-components";
+import { Pokemons } from "./pokemons-list";
 
 const Main =  () =>{
 
   const {theme} = useContext(ThemeContext)
 
   return (
-      <Container style={{ backgroundColor: theme.background}}>
+    <Container theme={theme}>
         <Div>
+          <Pokemons/>
         </Div>
       </Container>
   ) 

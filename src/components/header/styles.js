@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 
 const Container = styled.header`
+    color: ${(props) => props.theme.color};
+    background-color: ${(props) => props.theme.background};
     text-align: center;
     align-items: center;
     height: 250px;
     display: flex;
     justify-content: space-around;
-    background-color: #edf6f9;
     position: relative;
 `
 const Pikachu = styled.div`

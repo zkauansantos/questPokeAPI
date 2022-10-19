@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { getPokemonsList, getPokemonsData } from '../../../services/poke-api';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/theme-context';
-import {ContainerPokemons, ListOfPokemons, CardPokemon} from './styles'
+import {ContainerPokemons, ListOfPokemons, CardPokemon, Img, Name} from './styles'
 
 const Pokemons = () => {
     const {theme} = useContext(ThemeContext)
     const [pokemons, setPokemons] = useState([])
-    const [limit, offset] = [21] 
+    const [limit, offset] = [10] 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,8 +31,8 @@ const Pokemons = () => {
                     pokemons.map((index, position) => {
                         return(
                             <CardPokemon theme={theme} key={position}>
-                                <img style={{width: '90%', display: 'block'}} src={index.sprites.other['official-artwork'].front_default}></img>
-                                <p style={{textTransform: 'uppercase', fontWeight: 'bold'}}>{index.name}</p>
+                                <Img src={index.sprites.other['official-artwork'].front_default}></Img>
+                                <Name>{index.name}</Name>
                             </CardPokemon>
                         )
                     })

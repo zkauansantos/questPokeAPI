@@ -12,10 +12,11 @@ const ContainerPokemons = styled.div`
 
 
 const ListOfPokemons = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 20px;
+  justify-content: space-evenly;
+  margin-bottom: 150px;
 `
 
 const CardPokemon = styled.li`
@@ -35,10 +36,21 @@ const CardPokemon = styled.li`
     text-align: center;
     &:hover {
         cursor: pointer;
-        transition: 0.2s ease-in-out;
-        width: 220px ;
-        height: 270px;
+        transform: scale(1.2);
+        transition: 0.1s ease-in-out;
     }
 `
 
-export {ContainerPokemons, ListOfPokemons, CardPokemon}
+const Img = styled.img`
+    width: 90%; 
+    display: block;
+`
+
+const Name = styled.p`
+    text-transform: uppercase;
+    font-weight: bold;
+`
+
+
+
+export {ContainerPokemons, ListOfPokemons, CardPokemon, Img, Name}

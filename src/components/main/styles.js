@@ -5,7 +5,7 @@ const Container = styled.main`
 background-color: ${({theme}) => theme.backgroundMain};
 display: flex;
 justify-content: center;
-min-height: 800px;
+min-height: auto;
 `
 
 const Div = styled.div`

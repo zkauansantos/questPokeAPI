@@ -5,7 +5,7 @@ const ContainerPokemons = styled.div`
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     margin-top: 35px;
 `
@@ -16,7 +16,7 @@ const ListOfPokemons = styled.ul`
   grid-template-columns: repeat(5, auto);
   grid-gap: 20px;
   justify-content: space-evenly;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 `
 
 const CardPokemon = styled.li`

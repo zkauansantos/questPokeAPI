@@ -3,6 +3,7 @@ import { getPokemonsList, getPokemonsData } from '../../../services/poke-api';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/theme-context';
 import {ContainerPokemons, ListOfPokemons, CardPokemon, Img, Name} from './styles'
+import {ButtonShowMorePokemons} from '../../buttons/button-carregar/index'
 
 const Pokemons = () => {
     const {theme} = useContext(ThemeContext)
@@ -30,14 +31,18 @@ const Pokemons = () => {
                 {
                     pokemons.map((index, position) => {
                         return(
+                            <>
                             <CardPokemon theme={theme} key={position}>
                                 <Img src={index.sprites.other['official-artwork'].front_default}></Img>
                                 <Name>{index.name}</Name>
                             </CardPokemon>
+                            </>
+
                         )
                     })
                 }
             </ListOfPokemons>
+            <ButtonShowMorePokemons/>
         </ContainerPokemons>
     )
 }

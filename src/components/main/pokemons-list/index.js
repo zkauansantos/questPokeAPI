@@ -21,9 +21,15 @@ const Pokemons = () => {
         fetchData()
 
     },[])
+    
 
-    return(
-        <ContainerPokemons>
+    const addPokemons = (pokemonsData) => {
+        setPokemons([...pokemons, ...pokemonsData])
+    }
+
+    const PokemonsList = () => {
+        return (
+            <ContainerPokemons>
             <ListOfPokemons>
                 {
                     pokemons.map((index, position) => {
@@ -36,8 +42,16 @@ const Pokemons = () => {
                     })
                 }
             </ListOfPokemons>
-            <ButtonShowMorePokemons/>
+            <ButtonShowMorePokemons addPokemons={addPokemons}/>
         </ContainerPokemons>
+        )
+    }
+
+
+    return(
+        <>
+        <PokemonsList/>
+        </>
     )
 }
 

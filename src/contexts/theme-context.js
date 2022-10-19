@@ -7,13 +7,15 @@ export const themes = {
         icon: <FaMoon style={{color: '#333652'}}/>,
         color : ' #333652',
         background: '#e3d5ca',
-        backgroundMain: 'rgb(241, 234, 229)'
+        backgroundMain: 'rgb(241, 234, 229)',
+        cardColor: '#333652'
     },
     dark: {
         icon: <BsSunFill style={{color: '#333652'}}/>,
         color: '#e3d5ca',
         background : ' #333652',
-        backgroundMain: 'rgb(153, 155, 169)'
+        backgroundMain: 'rgb(153, 155, 169)',
+        cardColor: '#fff'
     }
 }
 

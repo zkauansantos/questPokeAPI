@@ -9,6 +9,9 @@ min-height: 800px;
 `
 
 const Div = styled.div`
+display: flex;
+justify-content: center;
+padding: 20px;
 background: url(${arenaPokemon})  center; 
 background-size: cover;
 width: 85%;

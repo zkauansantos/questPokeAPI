@@ -1,61 +1,47 @@
 import { useEffect, useState } from 'react';
 import { getPokemonsList, getPokemonsData } from '../../../services/poke-api';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../contexts/theme-context';
+import {ContainerPokemons, ListOfPokemons, CardPokemon} from './styles'
 
 const Pokemons = () => {
-
-    const [pokemons, setPokemons] = useState({
-        image: [],
-        name : []        
-    })
-    const [limit, offset] = [2] 
+    const {theme} = useContext(ThemeContext)
+    const [pokemons, setPokemons] = useState([])
+    const [limit, offset] = [21] 
 
     useEffect(() => {
         const fetchData = async () => {
             const pokemonsList = await getPokemonsList(limit, offset);
-            // console.log(pokemonsList)
             const pokemonsPromises = pokemonsList.results.map((pokemon) => getPokemonsData(pokemon.name))
-            // console.log(pokemonsPromises)
             const pokemonsData = await Promise.all(pokemonsPromises)
-            // console.log(pokemonsData)
-            const imgs = pokemonsData.map((index) => { return index.sprites.other['official-artwork'].front_default})
-            // console.log(imgs)
-            const names = pokemonsData.map((index) => { return index.name})
-            // console.log(names)
 
-
-            setPokemons({
-                image: imgs,
-                name: names
-        })
+            setPokemons([...pokemonsData])
         }
         fetchData()
 
     }, [])
 
+    console.log(pokemons)
+
+
     return(
-        <div>
-            <ul>
-                <li>
+        <ContainerPokemons>
+            <ListOfPokemons>
                 {
-                    pokemons.image.map((img, index) => {
-                        return (
-                        <img key={index}  style={{width: '20%'}} src={img}></img>
-                        )
-                    })
-                    
-                }
-                {
-                    pokemons.name.map((name, index) => {
-                        return (
-                            <p style={{marginTop: '15px'}} key={index}> {name}</p>
+                    pokemons.map((index, position) => {
+                        return(
+                            <CardPokemon theme={theme} key={position}>
+                                <img style={{width: '90%', display: 'block'}} src={index.sprites.other['official-artwork'].front_default}></img>
+                                <p style={{textTransform: 'uppercase', fontWeight: 'bold'}}>{index.name}</p>
+                            </CardPokemon>
                         )
                     })
                 }
-                </li>
-            </ul>
-
-
-        </div>
+            </ListOfPokemons>
+        </ContainerPokemons>
     )
 }
+
+
+
 export {Pokemons}

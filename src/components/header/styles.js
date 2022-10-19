@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 
 const Container = styled.header`
+    -webkit-box-shadow: 0px 0px 31px 10px rgba(0,0,150,0.45);
+    -moz-box-shadow: 0px 0px 31px 10px rgba(0,0,150,0.45);
+    box-shadow: 0px 0px 31px 10px rgba(0,0,150,0.45);
     color: ${(props) => props.theme.color};
     background-color: ${(props) => props.theme.background};
     text-align: center;

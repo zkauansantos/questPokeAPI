@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 
 const Container = styled.footer`
+  -webkit-box-shadow: 0px 0px 31px 10px rgba(0,0,150,0.45);
+  -moz-box-shadow: 0px 0px 31px 10px rgba(0,0,150,0.45);
+  box-shadow: 0px 0px 31px 10px rgba(0,0,150,0.45);
   color: ${({theme}) => theme.color};
   background-color: ${({theme}) => theme.background};
   display: flex;

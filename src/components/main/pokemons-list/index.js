@@ -8,8 +8,8 @@ import {ButtonShowMorePokemons} from '../../buttons/button-show-more/index'
 const Pokemons = () => {
     const {theme} = useContext(ThemeContext)
     const [pokemons, setPokemons] = useState([])
-    const limit= 10
     const [offSet, setOffSet] = useState(10)
+    const limit= 10
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,17 +17,12 @@ const Pokemons = () => {
             const pokemonsPromises = pokemonsList.results.map((pokemon) => getPokemonsData(pokemon.name))
             const pokemonsData = await Promise.all(pokemonsPromises)
 
-            setPokemons([...pokemonsData])
+            setPokemons( offSet === 0 ? [...pokemonsData] : [...pokemons, ...pokemonsData])
         }
         fetchData()
 
-    },[ offSet])
+    }, [offSet])
     
-
-
-    const addPokemons = (newPokemons) =>{
-        setPokemons([...pokemons, ...newPokemons])
-    }
 
     const PokemonsList = () => {
         return (
@@ -44,11 +39,10 @@ const Pokemons = () => {
                     })
                 }
             </ListOfPokemons>
-            <ButtonShowMorePokemons addPokemons = {addPokemons} setPokemons={setPokemons}/>
+            <ButtonShowMorePokemons offSet={offSet} setOffSet={setOffSet}  />
         </ContainerPokemons>
         )
     }
-
 
     return(
         <PokemonsList/>

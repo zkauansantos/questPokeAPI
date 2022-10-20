@@ -10,5 +10,9 @@ const Button = styled.button`
     border: ${({theme}) => theme.borderCardAndButton};
     font-size: 16px;
     margin-bottom: 20px;
+    &:hover{
+        transition: 0.2s ease-in-out;
+        transform: scale(1.2);
+    }
 `
 export { Button } 

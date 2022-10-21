@@ -13,4 +13,10 @@ import styled from "styled-components"
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+      height: 30px;
+      width: 30px;
+      bottom: -18px;
+  }
 `

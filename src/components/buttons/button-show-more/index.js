@@ -9,7 +9,7 @@ const ButtonShowMorePokemons = ({offSet, setOffSet}) => {
     const handleClick = () => setOffSet(offSet + 10)
     
     return(
-        <Button onClick={() => handleClick()} theme={theme}> Carregar Mais</Button>
+        <Button onClick={() => handleClick()} theme={theme}> Carregar Mais </Button>
     )
 }
 

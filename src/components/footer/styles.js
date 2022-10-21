@@ -11,6 +11,9 @@ const Container = styled.footer`
   align-items: center;
   justify-content: center;
   height: auto;
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
 `
 const Div = styled.div`
   margin: 20px 0;

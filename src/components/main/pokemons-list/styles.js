@@ -14,7 +14,7 @@ const ContainerPokemons = styled.div`
 const ListOfPokemons = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, auto);
-  gap: 35px;
+  gap: 20px;
   justify-content: space-evenly;
   margin-bottom: 50px;
 

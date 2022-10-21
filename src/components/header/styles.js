@@ -16,6 +16,12 @@ const Container = styled.header`
 `
 const Pikachu = styled.div`
     width: 220px;
+    @media screen and (max-width: 769px) {
+    width: 180px;
+    }
+    @media screen and (max-width: 480px) {
+      display: none;
+  }
 `
 
 const Logo = styled.div`
@@ -26,12 +32,15 @@ const Logo = styled.div`
 `;
 
 const ImgAnimated = styled.img`
-width: 100%;
-transition: transform 500ms ease-in-out ;
-cursor: pointer;
-&:hover {
-  transform: scale(1.3);
+  width: 100%;
+  transition: transform 500ms ease-in-out ;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.3); 
 }
+@media screen and (max-width: 480px) {
+    width: 80%;
+  }
 `
 
 const Img = styled.img`

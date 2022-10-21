@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/theme-context';
 import {ContainerPokemons, ListOfPokemons, CardPokemon, Img, Name} from './styles'
 import {ButtonShowMorePokemons} from '../../buttons/button-show-more/index'
+import { Link } from 'react-router-dom';
 
 const Pokemons = () => {
     const {theme} = useContext(ThemeContext)
@@ -28,18 +29,20 @@ const Pokemons = () => {
     const PokemonsList = () => {
         return (
             <ContainerPokemons>
-            <ListOfPokemons>
-                {
-                    pokemons.map((index, position) => {
-                        return(
-                            <CardPokemon theme={theme} key={position}>
-                                <Img src={index.sprites.other['official-artwork'].front_default}></Img>
-                                <Name>{index.name}</Name>
-                            </CardPokemon>
-                        )
-                    })
-                }
-            </ListOfPokemons>
+                <ListOfPokemons>
+                    {
+                        pokemons.map((index, position) => {
+                            return(
+                                <Link to={`pokemon/${index.name}`} key={position} >  
+                                    <CardPokemon theme={theme} >
+                                        <Img src={index.sprites.other['official-artwork'].front_default}></Img>
+                                        <Name>{index.name}</Name>
+                                    </CardPokemon>
+                                </Link>   
+                            )
+                        })
+                    }
+                </ListOfPokemons>
             <ButtonShowMorePokemons offSet={offSet} setOffSet={setOffSet}  />
         </ContainerPokemons>
         )

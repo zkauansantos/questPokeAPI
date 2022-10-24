@@ -60,8 +60,10 @@ Bom, eu achei que teria muito mais dificuldade de fazer esse projeto sozinho ach
 
 ## Como rodar o projeto 
 
+Abra o Terminal e execute os seguintes comandos : 
+
 ```  
-    $ https://github.com/zkauansantos/questPokeAPI.git
+    $ git clone https://github.com/zkauansantos/questPokeAPI.git
  ```
 
 ```  

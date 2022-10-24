@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Pokedex 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto consiste no desafio final do curso DevQuest simulando um teste técnico, O projeto foi desenvolvido por mim e os mentores deram o feedback quando finalizado.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- Poke API
+- ReactJs
+    - Hooks 
+    - React Router DOM
+- Javascript
+- Styled-Components
+- CSS
+- FetchJS
+- ReactIcons
 
-### `npm start`
+## Requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Criar uma Home (página inicial) de listagem de alguns pokemons,
+utilizando a api https://pokeapi.co/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Criar uma página interna de detalhe do pokemon.
 
-### `npm test`
+A home deve apresentar uma listagem com 10 pokemons
+iniciais.
+A home deve ter um botão "Carregar mais" abaixo dessa lista,
+que quando clicado deve buscar mais 10 pokemons e adicionar
+a listagem atual.
+Essa listagem deve mostrar a imagem e nome de cada pokemon.
+Na listagem cada pokemon deve ser clicável e ao clicar o usuário
+deve poder acessar uma página interna desse pokemon com
+informaçõões detalhadas, nessa página de detalhes devem
+aparecer as seguintes informações:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Imagem do pokemon
+- Nome
+- Lista de movimentos do pokemon (moves)
+    - a lista de habilidades deve apresentar o nome e o texto
+descritivo da habilidade
+- Tipo do pokemon (type)
+-Essa home deve ter um botão para que o usuário possa
+alternar de cor entre tema claro e tema escuro (light/dark)
 
-### `npm run build`
+## Requisitos Técnicos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A aplicação deverá ser Single Page Application (SPA);
+- Utilizar React.js para o desenvolvimento da
+aplicação;
+- Utilizar Context API para criação do Theme Toggler
+(Alternador entre tema claro e escuro);
+- Utilizar styled-components para estilização dos
+componentes;
+- Utilizar react-router-dom para a navegação entre as
+páginas;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Aprendizados e Desafios 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Bom, eu achei que teria muito mais dificuldade de fazer esse projeto sozinho achei que demoraria meses, mas acabei finalizando em 7 dias codando, tive alguns desafios na hora de consumir a api pois tinha muitos endpoints e na hora de apresentar os dados na tela, foi um pouco confuso mas no lendo a documentação e tirando algumas duvidas no final consegui pegar o jeito, por fim acredito que na realização deste projeto eu consegui consolidar muito mais meus conhecimentos em Javasript e React e agora pretendo fazer meu portfólio em React.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Como rodar o projeto 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```  
+    $ https://github.com/zkauansantos/questPokeAPI.git
+ ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```  
+    $ cd questPokeAPI
+ ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```  
+    $ npm install
+ ```
 
-## Learn More
+```  
+    $ npm start 
+ ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```  
+    $ https://github.com/zkauansantos/questPokeAPI.git
+ ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Layout do Site
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- DESKTOP 
 
-### Analyzing the Bundle Size
+[<img src='./src/assets/imgs/desktop.png'>]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+- MOBILE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[<img src='./src/assets/imgs/mobile.png'>]()
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

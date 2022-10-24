@@ -1,12 +1,9 @@
 import { useParams } from "react-router-dom";
 import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../contexts/theme-context";
-import { SectionInfo, Div, DivImg, DivDetails, Li, Ul } from "./styles";
-import {
-  getPokemonsList,
-  getPokemonsData,
-  getPokemonAbilities,
-} from "../../../services/poke-api";
+import { SectionInfo, DivDetails, DivMoves, DivContentMove, DivTypeAndAbilities, TitleCardsDetails, Div, Img, PokemonName, Span, Paragraph } from "./styles";
+import { getPokemonsData, getPokemonAbilities } from "../../../services/poke-api";
+import { ButtonBackToHome } from "../../buttons/button-back-to-home";
 
 const PokemonInfo = () => {
   const { theme } = useContext(ThemeContext);
@@ -32,64 +29,48 @@ const PokemonInfo = () => {
     fetchData();
   }, [])
 
-  const PokemonType = () =>{
-    return(
-        <Li theme={theme}>
-          <h3>Type</h3>
+  console.log(pokemonAbilities.flavor_text_entries)
+
+  const PokemonType = () =>(
+        <DivTypeAndAbilities theme={theme}>
+          <TitleCardsDetails> Type </TitleCardsDetails>
+          {pokemonType.map((index, position ) => <Paragraph theme={theme} key={position}> {index.type.name} </Paragraph>)}
+        </DivTypeAndAbilities>
+  )
+
+  const PokemonMoves = () => (
+        <DivMoves theme={theme}>
+          <TitleCardsDetails> Moves </TitleCardsDetails>
+          <DivContentMove>
+            {pokemonMoves.map((index, position) => <p key={position}> {index.move.name}, </p>)}
+          </DivContentMove>
+        </DivMoves>
+  )
+
+  const PokemonAbility = () => (
+        <DivTypeAndAbilities theme={theme}>
+          <TitleCardsDetails style={{marginBottom: '10px'}}>Abilities</TitleCardsDetails>
           {
-            pokemonType.map((index, position ) => {
-              return <p key={position}>{index.type.name}</p>
-            })
+            pokemonAbilities.map((index, position) => 
+            <Paragraph theme={theme} key={position}>{index.name}
+            <Span  theme={theme} >{index.flavor_text_entries[0].flavor_text}</Span>
+            </Paragraph>)
           }
-        </Li>
-    )
-  }
-
-  const PokemonMoves = () => {
-    return(
-        <Li  theme={theme}>
-          <h3>Moves</h3>
-          <div style={{display: 'flex', flexWrap: 'wrap', textAlign: 'center'}}>
-            { pokemonMoves.map((index, position) => {
-              return (
-                  <p key={position}> {index.move.name},   </p>
-              )
-            })}
-          </div>
-
-        </Li>
-    )
-  }
-
-  const PokemonAbility = () => {
-    return (
-
-        <Li theme={theme}>
-          <h3>Abilities</h3>
-          {
-            pokemonAbilities.map((index, position) => {
-              return <p key={position}> {index.name}</p>
-            })
-          }
-       </Li>
-
-    )
-  }
+       </DivTypeAndAbilities>
+  )
 
   return (
     <SectionInfo theme={theme}>
-      <Div>
-        <DivImg theme={theme}>
-          <img style={{width: '80%'}} src={pokemonImg}></img>
-        </DivImg>
+          <Img src={pokemonImg}></Img>
+          <PokemonName theme={theme}>{name}</PokemonName>
         <DivDetails>
-          <Ul>
-            <PokemonType/>
             <PokemonMoves/>
+            <Div>
+            <PokemonType/>
             <PokemonAbility/>
-          </Ul>
+            </Div>
         </DivDetails>
-      </Div>
+        <ButtonBackToHome/>
     </SectionInfo>
   );
 };

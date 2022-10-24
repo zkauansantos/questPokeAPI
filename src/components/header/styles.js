@@ -41,6 +41,10 @@ const ImgAnimated = styled.img`
 @media screen and (max-width: 480px) {
     width: 80%;
   }
+
+@media screen and (max-width: 325px) {
+    width: 60%;
+  }
 `
 
 const Img = styled.img`

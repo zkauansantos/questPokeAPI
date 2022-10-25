@@ -8,7 +8,7 @@ const ButtonBackToHome =  () => {
 
     return( 
         <Link to='/'>
-            <Button theme={theme}> Votar para o ínicio </Button>
+            <Button theme={theme}> Voltar para o ínicio </Button>
         </Link>
     )
 }

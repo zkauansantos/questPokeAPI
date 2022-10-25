@@ -27,9 +27,9 @@ const PokemonInfo = () => {
     }
 
     fetchData();
+    //eslint-disable-next-line
   }, [])
 
-  console.log(pokemonAbilities.flavor_text_entries)
 
   const PokemonType = () =>(
         <DivTypeAndAbilities theme={theme}>

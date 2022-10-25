@@ -28,8 +28,7 @@ const Logo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 420px;
-`;
+`
 
 const ImgAnimated = styled.img`
   width: 100%;

@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
-import { getPokemonsList, getPokemonsData } from '../../../services/poke-api';
+import { getPokemonsList, getPokemonsData, getTypesList } from '../../../services/poke-api';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/theme-context';
 import {ContainerPokemons, ListOfPokemons, CardPokemon, Img, Name} from './styles'
 import {ButtonShowMorePokemons} from '../../buttons/button-show-more/index'
 import { Link } from 'react-router-dom';
+import { FilterType } from '../select-filter-type';
 
 const Pokemons = () => {
     const {theme} = useContext(ThemeContext)
     const [pokemons, setPokemons] = useState([])
     const [offSet, setOffSet] = useState(0)
+    const [typeList, setTypeList] = useState([])
     const limit= 10
 
     useEffect(() => {
@@ -26,9 +28,19 @@ const Pokemons = () => {
     }, [offSet])
     
 
+    useEffect(() => {
+        const fetchData = async () => {
+            const typeList = await getTypesList ()
+
+            setTypeList(typeList.results)
+        }
+        fetchData()
+    },[])
+
     const PokemonsList = () => {
         return (
             <ContainerPokemons>
+                <FilterType typeList ={typeList}/>
                 <ListOfPokemons>
                     {
                         pokemons.map((index, position) => {

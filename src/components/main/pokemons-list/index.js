@@ -20,7 +20,7 @@ const Pokemons = () => {
             const pokemonsPromises = pokemonsList.results.map((pokemon) => getPokemonsData(pokemon.name))
             const pokemonsData = await Promise.all(pokemonsPromises)
 
-            setPokemons( [...pokemons, ...pokemonsData])
+            setPokemons([...pokemons, ...pokemonsData])
         }
         fetchData()
         
@@ -40,14 +40,14 @@ const Pokemons = () => {
     const PokemonsList = () => {
         return (
             <ContainerPokemons>
-                <FilterType typeList ={typeList}/>
+                <FilterType typeList ={typeList} pokemons={pokemons} setPokemons={setPokemons}/>
                 <ListOfPokemons>
                     {
                         pokemons.map((index, position) => {
                             return(
-                                <Link to={`pokemon/${index.name}`} key={position} >  
+                                <Link to={`pokemon/${index.name}`} key={position}>  
                                     <CardPokemon theme={theme} >
-                                        <Img src={index.sprites.other['official-artwork'].front_default}></Img>
+                                        <Img src={index.sprites.other['official-artwork'].front_default} alt={index.name}></Img>
                                         <Name>{index.name}</Name>
                                     </CardPokemon>
                                 </Link>   

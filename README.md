@@ -4,7 +4,7 @@ Esse projeto consiste no desafio final do curso DevQuest simulando um teste téc
 
 ## Link de acesso 
 
-<a href="https://questpoke.netlify.app" rel="noreferrer" > 📍Pokedéx </a>
+<a href="https://questpoke.netlify.app" rel="noreferrer" target= "_blank"> 📍Pokedéx </a>
 
 ## Tecnologias Utilizadas
 

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext} from 'react'
 import { ThemeContext } from '../../../contexts/theme-context'
 import { getTypeData, getPokemonsData } from '../../../services/poke-api'
 import {DivFilter, Label, Select, Option} from './styles'

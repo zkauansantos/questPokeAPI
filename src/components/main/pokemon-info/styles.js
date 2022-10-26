@@ -66,7 +66,7 @@ const Div = styled.div`
 `
 
 const Img = styled.img`
-    margin-top: 50px;
+    margin-top: 75px;
     width: 32%;
     border-bottom: 3px solid  rgb(250, 199, 5);
     @media screen and (max-width: 1024px) {
@@ -76,6 +76,7 @@ const Img = styled.img`
 `
 
 const PokemonName = styled.h2`
+    color: ${({theme}) => theme.cardColor};
     text-transform: uppercase;
     letter-spacing: 10px;
     font-size: 30px;

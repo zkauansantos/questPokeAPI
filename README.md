@@ -2,6 +2,10 @@
 
 Esse projeto consiste no desafio final do curso DevQuest simulando um teste técnico, O projeto foi desenvolvido por mim e os mentores deram o feedback quando finalizado.
 
+## Link de acesso 
+
+<a href="https://questpoke.netlify.app" rel="noreferrer" > Pokedéx </a>
+
 ## Tecnologias Utilizadas
 
 - Poke API

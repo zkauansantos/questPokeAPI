@@ -13,6 +13,8 @@ Esse projeto consiste no desafio final do curso DevQuest simulando um teste téc
     - Hooks 
     - React Router DOM
 - Javascript
+- Typescript
+- React-switch
 - Styled-Components
 - CSS
 - FetchJS

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   position: absolute;
@@ -15,4 +15,4 @@ export const Container = styled.div`
       background: ${({theme}) => theme.background};
     }
   }
-`
+`;
